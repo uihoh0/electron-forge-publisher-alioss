@@ -14,7 +14,7 @@ export interface PublisherAliossConfig {
     accessKeySecret?: string;
     /**
      * The region of your alioss
-     * The secret for your Alioss Access Key
+     * The secret for your Alioss REGION
      *
      * Falls back to the PUBLISHER_ALIOSS_REGION environment variable if not provided
      */

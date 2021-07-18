@@ -1,0 +1,26 @@
+{
+  "name": "electron-forge-publisher-alioss",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": "git@github.com:uihoh0/electron-forge-publisher-alioss.git",
+  "author": "uihoh0 <uihoh0@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dist": "rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "@electron-forge/async-ora": "^6.0.0-beta.57",
+    "@electron-forge/publisher-base": "^6.0.0-beta.57",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/ali-oss": "^6.0.10",
+    "@types/debug": "^4.1.6",
+    "debug": "^4.3.2",
+    "rollup": "^2.53.1",
+    "source-map-support": "^0.5.19",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "ali-oss": "^6.16.0"
+  }
+}

@@ -17,6 +17,7 @@ type AliossArtifact = {
   arch: string;
 };
 interface Alioss612 extends Alioss{
+  // @types/ali-oss@6.0.* doesn't match the type of ali-oss@6.12.*
   putSymlink(name: string, targetName: string, options?: {storageClass?: string,meta: Record<string, any>,headers: Record<string, any>}) : Promise<{
     status: number,
     headers: Record<string, any>

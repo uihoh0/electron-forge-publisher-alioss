@@ -2,7 +2,6 @@ import debug from 'debug';
 import Alioss from 'ali-oss';
 import PublisherBase, { PublisherOptions } from '@electron-forge/publisher-base';
 import { asyncOra } from '@electron-forge/async-ora';
-import fs from 'fs';
 import path from 'path';
 
 import { PublisherAliossConfig } from './config';
@@ -84,10 +83,10 @@ export default class PublisherAlioss extends PublisherBase<PublisherAliossConfig
             const baseURL = config.bucket || process.env.PUBLISHER_ALIOSS_BASE_URL || ''
             if(extname && !['.nupkg'].includes(extname)){
               const latestBaseName = `${artifact.packageJSON.productName || artifact.packageJSON.name}${extname}`
-              const latestDownloadLink = path.join(baseURL, config.latestSymLink || 'latest', `${artifact.platform}_${artifact.arch}`, latestBaseName)
+              const latestDownloadLink = path.join(baseURL, config.latestSymLink || 'latest', `${artifact.platform}_${artifact.arch}`, latestBaseName).replace(/\\/g, '\/')
               await aliossClient.putSymlink(latestDownloadLink, name)
             }
-            const updatelink = path.join(baseURL, config.latestSymLink || 'latest', `${artifact.platform}_${artifact.arch}`, basename)
+            const updatelink = path.join(baseURL, config.latestSymLink || 'latest', `${artifact.platform}_${artifact.arch}`, basename).replace(/\\/g, '\/')
             await aliossClient.putSymlink(updatelink, name)
           }
         uploaded += 1;

@@ -102,7 +102,7 @@
 
 - publisher-alioss would create symlinks for every artifacts under the `${config.baseURL}/${platform}_${arch}/latest`
 - publisher-alioss would create extra symlinks for the artifacts has extname which isn't .nupkg
-  - e.g. : file<whateverisit.exe> would create a extra symlinks `${config.baseURL}\latest\${platform}_${arch}\${packageJSON.productName || packageJSON.name}.exe`
-  - e.g. : file<whateverisit.zip> would create a extra symlinks `${config.baseURL}\latest\${platform}_${arch}\${packageJSON.productName || packageJSON.name}.zip`
+  - e.g. : file<whateverisit.exe> would create a extra symlinks `${config.baseURL}/latest/${platform}_${arch}/${packageJSON.productName || packageJSON.name}.exe`
+  - e.g. : file<whateverisit.zip> would create a extra symlinks `${config.baseURL}/latest/${platform}_${arch}/${packageJSON.productName || packageJSON.name}.zip`
   - e.g. : file<yourApp-full.nupkg> would not create a extra symlinks
   - e.g. : file<REALEASE> would not create a extra symlinks

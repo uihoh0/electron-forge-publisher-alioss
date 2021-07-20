@@ -1,6 +1,6 @@
 {
   "name": "electron-forge-publisher-alioss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "repository": "git@github.com:uihoh0/electron-forge-publisher-alioss.git",
   "author": "uihoh0 <uihoh0@users.noreply.github.com>",
@@ -20,6 +20,9 @@
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "ali-oss": "^6.16.0"
   }
